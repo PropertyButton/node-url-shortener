@@ -8,7 +8,15 @@ module.exports = function (app, nus) {
 
   // index route
   app.route('/').all(function (req, res) {
-    res.render('index');
+    if (app.get('env') === 'production') {
+      res.redirect(301, 'https://www.propertybutton.ie/');
+    } else {
+      res.render('index');
+    }
+  });
+
+  app.get('/test', function(req, res) {
+    res.send('hello world');
   });
 
   // shorten route
