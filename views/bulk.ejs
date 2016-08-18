@@ -18,16 +18,16 @@
     <div class="container">
 
       <header class="header">
-        <h1>Node Url Shortener</h1>
-        <p class="lead">A modern, minimalist, and lightweight URL shortener using <a href="http://nodejs.org">Node.js</a> and <a href="http://redis.io">Redis</a>.</p>
+        <h1>Bulk URL Shortening for CRM</h1>
+        <p class="lead">This is a bulk page for creating and shortening urls by Id. In the URL prefix box below enter the url eg "www.example.com/mypage?id=", then in the second box enter the list of ids <strong>one per line</strong> and click the button. This will update the input with a line per Id, a url and the short url associated seperated by commas. You should then be able to save this to a text file with the .csv extension and upload back to the CRM</p>
       </header><!-- /.header -->
 
       <form role="form" class="form-vertical" id="nus">
         <div class="form-group">
-          <input type="text" name="prefix_url" class="input-lg form-control"/>
+          <input type="text" name="prefix_url" class="input-lg form-control" placeholder="URL Prefix" />
         </div>
         <div class="form-group">
-          <textarea id="link" name="long_url" class="form-control input-lg bulk-input" rows="25"></textarea>
+          <textarea id="link" name="long_url" class="form-control input-lg bulk-input" rows="25" placeholder="Ids one per line"></textarea>
         </div><!-- /.input-group -->
         <button class="btn btn-default btn-lg" type="submit"> 
           <span class="glyphicon glyphicon-link"></span>
