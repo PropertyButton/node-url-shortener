@@ -15,8 +15,8 @@ module.exports = function (app, nus) {
     }
   });
 
-  app.get('/test', function(req, res) {
-    res.send('hello world');
+  app.get('/bulk', function(req, res) {
+    res.render('bulk');
   });
 
   // shorten route
